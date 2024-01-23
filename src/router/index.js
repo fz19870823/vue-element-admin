@@ -371,7 +371,56 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  {
+    path: '/teacher-management',
+    component: Layout,
+    meta: { title: '教师管理', icon: 'user' },
+    children: [
+      {
+        path: 'query',
+        component: () => import('@/views/teacher-management/query'),
+        name: 'TeacherQuery',
+        meta: { title: '教师信息查询' }
+      },
+      {
+        path: 'entry',
+        component: () => import('@/views/teacher-management/entry'),
+        name: 'TeacherEntry',
+        meta: { title: '教师信息录入' }
+      },
+      {
+        path: 'upload',
+        component: () => import('@/views/teacher-management/upload'),
+        name: 'TeacherUpload',
+        meta: { title: '教师信息批量上传' }
+      }
+    ]
+  },
+  {
+    path: '/student-management',
+    component: Layout,
+    meta: { title: '学生管理', icon: 'user' },
+    children: [
+      {
+        path: 'query',
+        component: () => import('@/views/student-management/query'),
+        name: 'StudentQuery',
+        meta: { title: '学生信息查询' }
+      },
+      {
+        path: 'entry',
+        component: () => import('@/views/student-management/entry'),
+        name: 'StudentEntry',
+        meta: { title: '学生信息录入' }
+      },
+      {
+        path: 'upload',
+        component: () => import('@/views/student-management/upload'),
+        name: 'StudentUpload',
+        meta: { title: '学生信息批量上传' }
+      }
+    ]
+  },
   {
     path: '/i18n',
     component: Layout,
